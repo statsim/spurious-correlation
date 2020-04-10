@@ -13,7 +13,7 @@ class Spurious {
     this.divTrace.style.maxWidth = '600px'
 
     this.divPlot = document.createElement('div')
-    this.divPlot.style.height = '600px'
+    this.divPlot.style.height = '450px'
     this.divPlot.style.width = '100%'
     this.divPlot.style.maxWidth = '600px'
 
