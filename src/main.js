@@ -35,6 +35,7 @@ class Spurious {
       data,
       {
         'labels': ['i', 'x', 'y'],
+        'panEdgeFraction': 0,
         'series': {
           'x': {
             'strokeWidth': 1.5,
@@ -53,7 +54,7 @@ class Spurious {
       this.divPlot,
       plotData,
       {
-        'drawPoints': true,
+        'panEdgeFraction': 0,
         'labels': ['x', 'y', 'yp'],
         'series': {
           'y': {
