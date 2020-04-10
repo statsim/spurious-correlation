@@ -1,2 +1,2 @@
-#
+# Spurious correlation example
 

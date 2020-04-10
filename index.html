@@ -11,8 +11,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>Port application</h1>
-      <p>Description...</p>
+      <h2>Spurious correlation simulator</h2>
+      <p><i>In statistics, a spurious relationship or spurious correlation[1][2] is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor </i>(<a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wiki</a>)</p>
+      <p>The application demonstrates spurious correlation that appear in non-stationary timeseries. It generates two random walks with <b>n</b> number of time-steps, then calculates correlation between them and plots a regression line</p>
       <div id="port-container"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -22,18 +23,24 @@
         portContainer: document.getElementById('port-container'),
         schema: {
           "model": {
-            "type": "function",
-            "container": "args",
-            "autorun": true,
-            "worker": true
-            "url": "main.js",
-            "name": "main",
+            "type": "class",
+            "name": "Spurious",
+            "method": "run",
+            "url": "spurious.js",
+            "worker": false
+          },
+          "design": {
+            "layout": "sidebar",
+            "colors": "light"
           },
           "inputs": [
-            { "type": "int", "name": "x" }
-          ],
-          "outputs": [
-            { "type": "int", "name": "y" }
+            {
+              "name": "n",
+              "type": "int",
+              "min": 10,
+              "max": 10000,
+              "default": 1000
+            }
           ]
         }
       })
