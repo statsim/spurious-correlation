@@ -35,7 +35,7 @@ class Spurious {
       data,
       {
         'labels': ['i', 'x', 'y'],
-        'panEdgeFraction': 0,
+        'interactionModel': {},
         'series': {
           'x': {
             'strokeWidth': 1.5,
@@ -55,6 +55,7 @@ class Spurious {
       plotData,
       {
         'panEdgeFraction': 0,
+        'interactionModel': {},
         'labels': ['x', 'y', 'yp'],
         'series': {
           'y': {
