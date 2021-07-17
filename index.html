@@ -8,21 +8,62 @@
     <link type="text/css" rel="stylesheet" href="https://statsim.com/port/css/port.css" media="screen"/>
     <link rel="icon" type="image/png" href="https://statsim.com/port/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://statsim.com/port/images/favicon-16x16.png" sizes="16x16">
+    <link type="text/css" rel="stylesheet" href="https://statsim.com/assets/common.css" media="screen"/>
   </head>
   <body>
+
+    <div class="status-bar grey-bar">
+      <div class="container">
+        <!-- ROW -->
+        <div class="row">
+          <div class="col s12" style="font-size: 14px;">
+            <div id="menu"></div>
+            <a href="">StatSim</a> → <b>Spurious correlation</b>
+            <span class="version">Version: 0.1.0</span>
+          </div>
+        </div>
+        <!-- /ROW -->
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
-        <div class="col m12">
-          <a href="https://statsim.com/"><img src="https://statsim.com/app/images/favicon-96x96.png" alt="StatSim Logo" style="width:50px; height: 50px; margin-top: 20px;"></a>
-          <h3>Spurious correlation</h3>
-          <p><i>In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor </i>(<a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wiki</a>)</p>
-          <p>The application demonstrates spurious correlation that appears in non-stationary timeseries. It generates two random walks with <b>n</b> number of time-steps, then calculates correlation between them and plots a regression line</p>
+        <div id="port-container"></div>
+      </div>
+    </div>
+
+    <div id="description" class="grey-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col m12">
+            <h1>Spurious correlation</h1>
+            <h2>Generate two independent random walks and check how correlated they are</h2>
+            <p>
+              <i>In statistics, a spurious relationship or spurious correlation is a mathematical relationship in which two or more events or variables are associated but not causally related, due to either coincidence or the presence of a certain third, unseen factor </i>(<a href="https://en.wikipedia.org/wiki/Spurious_relationship">Wiki</a>)
+            </p>
+            <p>
+              The application demonstrates spurious correlations that appear in non-stationary time series. It generates two random walks with <b>n</b> number of time-steps, then calculates a correlation between them and plots a regression line.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m12">
+            <small>
+              All processing and visualization happens in your browser. We don't see, collect or sell your data<br> 
+            </small>
+            <p>
+              <a class="github-button" href="https://github.com/statsim/spurious-correlation" data-icon="octicon-star" data-show-count="true" aria-label="Star statsim/spurious-correlation on GitHub">Star</a>
+              <a class="github-button" href="https://github.com/statsim/spurious-correlation/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue statsim/spurious-correlation on GitHub">Issue</a>
+            </p>
+          </div>
         </div>
       </div>
-      <div id="port-container"></div>
     </div>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://statsim.com/port/dist/port.js"></script>
+    <script src="https://statsim.com/assets/common.js"></script>
     <script>
       var port = new Port({
         portContainer: document.getElementById('port-container'),

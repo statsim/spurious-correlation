@@ -8,12 +8,10 @@ class Spurious {
     var outputs = document.getElementById('outputs')
     this.h = document.createElement('h5')
     this.divTrace = document.createElement('div')
-    this.divTrace.style.height = '250px'
     this.divTrace.style.width = '100%'
     this.divTrace.style.maxWidth = '600px'
 
     this.divPlot = document.createElement('div')
-    this.divPlot.style.height = '450px'
     this.divPlot.style.width = '100%'
     this.divPlot.style.maxWidth = '600px'
 
@@ -23,6 +21,8 @@ class Spurious {
     outputs.appendChild(this.divPlot)
   }
   run (params) {
+    this.divTrace.style.height = '250px'
+    this.divPlot.style.height = '450px'
     var n = params.n || 1000
     console.log(rand.normal(0, 1))
     var data = [[0, Math.random() * 100, Math.random() * 100]]
